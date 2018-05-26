@@ -1,0 +1,9 @@
+meta(charset="utf-8")
+title= page.title ? helpers.setTitle(site.title, page.title) : site.title
+meta(name="description" content=page.description || site.description)
+meta(name="author" content=page.author || site.author)
+block preloads
+link(rel="stylesheet" href=helpers.googleFonts('comfortaa', 'open sans'))
+link(rel="stylesheet" href=helpers.getAsset(site.assetPath, site.cssPath, 'main.css'))
+meta(name="viewport" content="width=device-width, initial-scale=1")
+block stylesheet

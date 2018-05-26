@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My So-Called Blog | home</title>
+	<meta name="description" content="My Personal Blog">
+	<meta name="author" content="Michael Kornblum">
+	<link rel="preload" href="/assets/hero-image-320px.jpeg" as="image" media="(max-width: 479px)" />
+	<link rel="preload" href="/assets/hero-image-480px.jpeg" as="image" media="(max-width: 767px)" />
+	<link rel="preload" href="/assets/hero-image-768px.jpeg" as="image" media="(max-width: 991px)" />
+	<link rel="preload" href="/assets/hero-image-992px.jpeg" as="image" media="(max-width: 1199px)" />
+	<link rel="preload" href="/assets/hero-image-1200px.jpeg" as="image" media="(min-width: 1200px)" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans">
+	<link rel="stylesheet" href="/assets/styles/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.hero-area {
+			background-image: url('/assets/hero-image-320px.jpeg');
+		}
+
+		@media screen and (min-width: 480px) {
+			.hero-area {
+				background-image: url('/assets/hero-image-480px.jpeg');
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			.hero-area {
+				background-image: url('/assets/hero-image-768px.jpeg');
+			}
+		}
+
+		@media screen and (min-width: 992px) {
+			.hero-area {
+				background-image: url('/assets/hero-image-992px.jpeg');
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			.hero-area {
+				background-image: url('/assets/hero-image-1200px.jpeg');
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>My So-Called Blog</h1>
+		<nav>
+			<ul>
+				<li><a class="active" href="/">home</a></li>
+				<li><a href="/about">about</a></li>
+				<li><a href="/contact">contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article>
+		<header>
+			<h1>home</h1>
+		</header>
+		<main>
+			<p>is this working?</p>
+		</main>
+	</article>
+	<footer><small>&copy;2018 Michael Kornblum</small></footer>
+</body>
+
+</html>

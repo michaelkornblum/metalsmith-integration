@@ -1,0 +1,21 @@
+extends base.pug
+
+append variables
+  - page.heroImgPath = heroImgPath
+  - page.heroImgExt = heroImgExt
+  - page.heroImages = helpers.imagePreloads(page.heroImgPath, page.heroImgExt, site.breakpoints)
+  - page.backgroundImages = helpers.backgroundImages('.hero-area', page.heroImgPath, page.heroImgExt, site.breakpoints);
+
+block mixins
+  include mixins/image-preload.pug
+
+block preloads
+  each image in page.heroImages
+    +imagePreload(href=image.name media=image.media)
+
+block stylesheet
+  style=page.backgroundImages
+
+
+
+    

@@ -1,0 +1,17 @@
+include ../mixins/link.pug
+
+ul
+  if page.title == 'home'
+    li
+      +link('/', 'home')(class="active")
+  else
+    li
+      +link('/', 'home')
+  block navLinks
+    for entry in collections.pages
+      if entry.title == page.title
+        li
+          +link('/' + entry.path, entry.title)(class="active")
+      else
+        li
+          +link('/' + entry.path, entry.title)

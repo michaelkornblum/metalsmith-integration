@@ -1,0 +1,25 @@
+- const page = {}
+
+block variables
+  - page.title = title
+  - page.decription = description
+
+block mixins
+
+doctype html
+html(lang=en)
+  head
+    block head
+      include partials/head.base.pug
+  body
+    header 
+      block header
+        include partials/header.base.pug
+    block content
+      article
+        header
+          h1=page.title
+        main!=contents
+      block footer
+        footer
+          include partials/footer.base.pug
