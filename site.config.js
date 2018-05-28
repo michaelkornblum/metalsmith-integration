@@ -4,7 +4,8 @@ const {
   getAsset,
   imagePreloads,
   backgroundImages,
-  getYear
+  getTags,
+  getYear,
 } = require('./functions');
 
 
@@ -32,6 +33,7 @@ module.exports = {
     getAsset,
     imagePreloads,
     backgroundImages,
+    getTags,
     getYear,
   },
 };

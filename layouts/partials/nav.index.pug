@@ -1,4 +1,12 @@
 extends nav.base.pug
 
+block variables
+  - page.tags = helpers.getTags(collections.posts);
+
 block navLinks
-  
+  li blog
+    ul by cagtegory
+      each tag in page.tags
+        li: a(href='/' + tag.path)=tag.name
+    ul archives
+      li: a(href='/' + 'archives/') archives

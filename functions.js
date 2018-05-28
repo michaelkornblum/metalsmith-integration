@@ -55,4 +55,21 @@ exports.backgroundImages = (className, path, ext, sizes) => {
   return css;
 };
 
-
+exports.getTags = (collection) => {
+  let arr = [];
+  collection.forEach((item) => { 
+    if(item.hasOwnProperty('tags')) {
+      item.tags.forEach((tag) => {
+        arr.push(tag.name);
+      })
+    }
+  });
+  return arr.filter((tag, index) => arr.indexOf(tag) == index)
+  .map((tag => {
+    let pathName = tag.replace(' ', '-');
+    return {
+      name: tag,
+      path: `categories/${pathName}/`
+    };
+  }));
+};

@@ -5,6 +5,7 @@ append variables
   - page.heroImgExt = heroImgExt
   - page.heroImages = helpers.imagePreloads(page.heroImgPath, page.heroImgExt, site.breakpoints)
   - page.backgroundImages = helpers.backgroundImages('.hero-area', page.heroImgPath, page.heroImgExt, site.breakpoints);
+  - page.tags = helpers.getTags(collections.posts)
 
 block mixins
   include mixins/image-preload.pug
@@ -16,6 +17,5 @@ block preloads
 block stylesheet
   style=page.backgroundImages
 
-
-
-    
+block nav
+  include partials/nav.index.pug
