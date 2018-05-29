@@ -5,8 +5,7 @@ block variables
 
 block navLinks
   li blog
-    ul by cagtegory
+    ul 
       each tag in page.tags
-        li: a(href='/' + tag.path)=tag.name
-    ul archives
-      li: a(href='/' + 'archives/') archives
+          li: +link('/' + tag.path, tag.name)
+      li: +link('/' + 'archives/1/', 'blog archives')
